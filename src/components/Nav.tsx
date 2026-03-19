@@ -1,16 +1,20 @@
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 export default function Nav() {
     return(
-        <nav className="bg-blue-900 p-4 w-full">
+        <nav className="bg-blue-900 px-6 py-4 w-full sticky top-0">
             <div className="flex items-center">
                 <Link to="/" className="text-white font-bold text-2xl">Site bom</Link>
-                <div className="ml-auto space-x-4">
-                    <a className='pointer-events-none select-none'>Placeholder</a>
-                    <a className='pointer-events-none select-none'>Placeholder</a>
+                <div className="mx-auto space-x-4">
                     <Link to="/dashboard" className="text-white">Dashboard</Link>
-                    <Link to="/login" className="py-2 px-3 text-white rounded-xl bg-neutral-800 hover:bg-neutral-900 active:bg-neutral-950">Login</Link>
+                    <a className='pointer-events-none select-none'>Placeholder</a>
+                    <a className='pointer-events-none select-none'>Placeholder</a>
                 </div>
+                <Button 
+                    text='Login'
+                    route='login'
+                />
             </div>
         </nav>
     )
